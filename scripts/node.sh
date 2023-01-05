@@ -2,7 +2,7 @@
 #
 # Setup for Node servers
 
-set -euxo pipefail
+set -eux pipefail
 
 config_path="/vagrant/configs"
 
