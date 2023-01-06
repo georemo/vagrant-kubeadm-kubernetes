@@ -27,7 +27,7 @@ Vagrant.configure("2") do |config|
     master.vm.provision "file", source: "scripts/common.sh", destination: "common.sh"
     # master.vm.provision "shell", path: "scripts/master.sh"
     master.vm.provision "file", source: "scripts/master.sh", destination: "master.sh"
-    master.vm.provision :shell, :inline => "sudo sh common.sh && sudo sh master.sh"
+    master.vm.provision :shell, :inline => "sudo bash common.sh && sudo bash master.sh"
   end
 
   (1..NUM_WORKER_NODES).each do |i|
@@ -44,7 +44,7 @@ Vagrant.configure("2") do |config|
     node.vm.provision "file", source: "scripts/common.sh", destination: "common.sh"
     # node.vm.provision "shell", path: "scripts/node.sh"
     node.vm.provision "file", source: "scripts/node.sh", destination: "node.sh"
-    node.vm.provision :shell, :inline => "sudo sh common.sh && sudo sh node.sh"
+    node.vm.provision :shell, :inline => "sudo bash common.sh && sudo bash node.sh"
   end
 
   end

@@ -2,7 +2,7 @@
 #
 # Setup for Control Plane (Master) servers
 
-set -eux pipefail
+set -euxo pipefail
 
 MASTER_IP="192.168.1.202"
 NODENAME=$(hostname -s)
